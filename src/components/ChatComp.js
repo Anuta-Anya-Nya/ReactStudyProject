@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import HeaderMenu from "./HeaderMenu";
-function MyComp() {
+function ChatComp() {
   const chatId = useParams().chatId;
   return (
     <div>
@@ -10,4 +10,4 @@ function MyComp() {
   );
 }
 
-export default MyComp;
+export default ChatComp;

@@ -2,15 +2,50 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import MyComp from "./components/MyComp";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import StartPage from "./components/StartPage";
+import ProfileComp from "./components/ProfileComp";
+import MyComp from "./components/MyComp";
+import Error404 from "./components/Error404";
+import ChatComp from "./components/ChatComp";
+import MyReactRedux from "./components/MyReactRedux";
 
-const myName = "Anna";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <StartPage />,
+  },
+  {
+    path: "/chats",
+    element: <App />,
+  },
+  {
+    path: "chats/:chatId",
+    element: <ChatComp />,
+  },
+  {
+    path: "/profile",
+    element: <ProfileComp />,
+  },
+  {
+    path: "/myComp",
+    element: <MyComp />,
+  },
+  {
+    path: "/reactRedux",
+    element: <MyReactRedux />,
+  },
+  {
+    path: "*",
+    element: <Error404 />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
