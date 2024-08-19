@@ -16,12 +16,14 @@ function ChatComp() {
       <HeaderMenu />
       <h1>This is chat with {currentChat.name}</h1>
 
-      {currentMessageList.map((el, i) => (
-        <div key={i}>
-          <h3>{el.author}</h3>
-          <div>{el.text}</div>
-        </div>
-      ))}
+      {currentMessageList
+        ? currentMessageList.map((el, i) => (
+            <div key={i}>
+              <h3>{el.author}</h3>
+              <div>{el.text}</div>
+            </div>
+          ))
+        : "Сообщений пока нет"}
     </div>
   );
 }

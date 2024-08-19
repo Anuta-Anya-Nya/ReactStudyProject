@@ -12,7 +12,7 @@ import ChatComp from "./components/ChatComp";
 import MyReactRedux from "./components/MyReactRedux";
 import { Provider } from "react-redux";
 import { store2 } from "./store/initialState/store2";
-import ChatsComp from "./components/ChatsComp";
+import ChatsComp from "./components/ChatsComponents/ChatsComp";
 
 const router = createBrowserRouter([
   {
