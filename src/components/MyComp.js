@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import HeaderMenu from "./HeaderMenu";
+
 function MyComp() {
   const chatId = useParams().chatId;
+
   return (
     <div>
       <HeaderMenu />

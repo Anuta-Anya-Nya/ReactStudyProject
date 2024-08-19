@@ -17,9 +17,11 @@ const initialState = {
   userName: "Anna",
 };
 
-const TOGGLE_NAME = "toggleShowName"; //action
+const TOGGLE_NAME = "toggleShowName"; //type action
+
 export const actionToggleName = {
-  //actionCreator
+  //action
+
   type: TOGGLE_NAME,
   //value: ...
 };

@@ -1,3 +1,3 @@
-const ACTION_2 = "ACTION_2";
+const ACTION_2 = "changeText";
 
 export default ACTION_2;

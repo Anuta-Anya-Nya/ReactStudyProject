@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import StartPage from "./components/StartPage";
@@ -10,6 +10,9 @@ import MyComp from "./components/MyComp";
 import Error404 from "./components/Error404";
 import ChatComp from "./components/ChatComp";
 import MyReactRedux from "./components/MyReactRedux";
+import { Provider } from "react-redux";
+import { store2 } from "./store/initialState/store2";
+import ChatsComp from "./components/ChatsComp";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/chats",
-    element: <App />,
+    element: <ChatsComp />,
   },
   {
     path: "chats/:chatId",
@@ -45,7 +48,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store2}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
