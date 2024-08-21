@@ -24,6 +24,12 @@ function HeaderMenu() {
         <li>
           <Link to={"/reactRedux"}>ReactRedux</Link>
         </li>
+        <li>
+          <Link to={"/apiComp"}>API Comp</Link>
+        </li>
+        <li>
+          <Link to={"/apiCompThunk"}>API Thunk</Link>
+        </li>
       </ul>
     </nav>
   );

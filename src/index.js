@@ -13,6 +13,8 @@ import MyReactRedux from "./components/MyReactRedux";
 import { Provider } from "react-redux";
 import { store2 } from "./store/initialState/store2";
 import ChatsComp from "./components/ChatsComponents/ChatsComp";
+import ApiCompThunk from "./components/ApiLessonComponents/ApiCompThunk";
+import ApiComp from "./components/ApiLessonComponents/ApiComp";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
   {
     path: "/reactRedux",
     element: <MyReactRedux />,
+  },
+  {
+    path: "/apiComp",
+    element: <ApiComp />,
+  },
+  {
+    path: "/apiCompThunk",
+    element: <ApiCompThunk />,
   },
   {
     path: "*",
